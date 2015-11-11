@@ -32,7 +32,7 @@ public class Warrior{
 
     public int attack(Monster mon){
 	int damage;
-	damage = (strength * attack) - mon.getDefense();
+	damage = (int)(strength * attack) - mon.getDefense();
 	return damage;
     }
 	
