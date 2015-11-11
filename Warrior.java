@@ -7,6 +7,7 @@ public class Warrior{
     private double attack;
 
     public Warrior(String newName){
+	// Sets attributes
 	name = newName;
 	hp = 125;
 	strength = 100;
@@ -15,24 +16,24 @@ public class Warrior{
     }
 	
     public  boolean isAlive(){
-	return hp > 0;
+	return hp > 0; // If the "hp" is above 0, return true;
     }
 
     public int getDefense(){
-	return defense;
+	return defense; // returns the defense
     }
 
     public String getName(){
-	return name;
+	return name; // returns the name
     }
 
     public void lowerHP(int dmg){
-	hp -= dmg;
+	hp -= dmg; // returns the "hp" after the "damage" has been applied
     }
 
     public int attack(Monster mon){
 	int damage;
-	damage = (int)(strength * attack) - mon.getDefense();
+	damage = (int)(strength * attack) - mon.getDefense(); // sets damage
 	return damage;
     }
 	
