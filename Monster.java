@@ -1,11 +1,11 @@
-public class Warrior{
+public class Monster{
 
     private int hp;
     private int strength;
     private int defense;
     private double attack;
 
-    public Warrior(String newName){
+    public Monster(String newName){
 	hp = 150;
 	strength = 20 + (int)(Math.random() * (45));
 	defense = 20;
