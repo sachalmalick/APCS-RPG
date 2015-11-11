@@ -13,7 +13,7 @@ public class Warrior{
 	defense = 40;
 	attack = 0.4;
     }
-
+	
     public  boolean isAlive(){
 	return hp > 0;
     }
@@ -35,5 +35,17 @@ public class Warrior{
 	damage = (strength * attack) - mon.getDefense();
 	return damage;
     }
+	
+	public void normalize() {
+		
+		defense = 40;
+		attack = 0.4;
+		
+	}
+	
+	public void specialize(int deff, double atta) {
+		defense-=deff;
+		attack+=atta;
+	}
 
 }
