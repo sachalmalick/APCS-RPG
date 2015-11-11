@@ -43,9 +43,9 @@ public class Warrior{
 		
 	}
 	
-	public void specialize(int deff, double atta) {
-		defense-=deff;
-		attack+=atta;
+	public void specialize() {
+		defense-=10;
+		attack+=1;
 	}
 
 }
