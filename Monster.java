@@ -13,6 +13,14 @@ public class Monster extends Character{
 	super();
     }
 	
+    public void setStrength(int newStrength){
+	strength = newStrength;
+    }
+
+    public void confuse(){
+	strength = -100;
+    }
+
     // public  boolean isAlive(){
     // 	return hp > 0; // If the "hp" is above 0, return true;
     // }
@@ -35,5 +43,19 @@ public class Monster extends Character{
     // 	war.lowerHP(damage);
     // 	return damage;
     // }
+
+
+    public int attack(Sachal foe){
+	int damage;
+	damage = (int)(strength * attack) - foe.getDefense(); // sets damage
+	double x = Math.random();
+	if (x < 1.0f/2.0f){
+	    lowerHP(damage);
+	    System.out.print("Confused");
+	}
+	else
+	    foe.lowerHP(damage);
+	return damage;
+    }
 
 }

@@ -43,10 +43,10 @@ public class Character{
 	hp -= dmg; // returns the "hp" after the "damage" has been applied
     }
 
-    public int attack(Character enemy){
+    public int attack(Character foe){
 	int damage;
-	damage = (int)(strength * attack) - enemy.getDefense(); // sets damage
-	enemy.lowerHP(damage);
+	damage = (int)(strength * attack) - foe.getDefense(); // sets damage
+	foe.lowerHP(damage);
 	return damage;
     }
 

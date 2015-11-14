@@ -14,7 +14,7 @@ public class Rogue extends Character{
 	// Sets attributes
 	super(newName);
 	hp = 75;
-	strength = 150;
+	strength = 125;
 	defense = 25;
 	attack = 0.5;
     }
@@ -34,7 +34,7 @@ public class Rogue extends Character{
     public void lowerHP(int dmg){
 	double x = Math.random();
 	if (x < 1.0f/3.0f)
-	    hp = hp; // returns the "hp" after the "damage" has been applied
+	    System.out.println("Evaded"); // returns the "hp" after the "damage" has been applied
 	else
 	    hp -= dmg;
     }
