@@ -23,13 +23,13 @@ public class YoRPG {
     public final static int MAX_ENCOUNTERS = 5;
 
     //each round, a Warrior and a Monster will be instantiated
-    private Warrior pat;   //Is it man or woman?
+    private Character pat;   //Is it man or woman?
     private Monster smaug; //Friendly generic monster name, eh?
 
     private int moveCount;
     private boolean gameOver;
     private int difficulty;
-
+    private int person;
     private InputStreamReader isr;
     private BufferedReader in;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,6 +58,7 @@ public class YoRPG {
 
 	String s;
 	String name = "";
+	int character = 0;
 	s = "Welcome to Ye Olde RPG!\n";
 
 	s += "\nChoose your difficulty: \n";
@@ -79,11 +80,29 @@ public class YoRPG {
 	    name = in.readLine();
 	}
 	catch ( IOException e ) { }
+	
 
-
+	s = "What are ya? An Assy Archer? a Moggling Mage? A Redneck Rouge? A Stupid Sachal?: Choose \n (1) Archer \n (2) Mage \n (3) Rouge \n (4) Sachal ";
+	System.out.print( s );
+	
+	try {
+	    character = Integer.parseInt( in.readLine() );
+	}
+	catch ( IOException e ) { }
+	
 	//instantiate the player's character
-	pat = new Warrior( name );
-
+	if (character == 1) {
+	pat = new Archer( name );
+	}
+	if (character == 2) {
+		pat = new Mage( name );
+		}
+	if (character == 3) {
+		pat = new Rogue( name );
+		}
+	if (character == 4) {
+		pat = new Sachal( name );
+		}
     }//end newGame()
 
 

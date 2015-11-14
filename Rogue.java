@@ -32,11 +32,11 @@ public class Rogue extends Character{
     // }
 
     public void lowerHP(int dmg){
-	doulbe x = Math.random();
+	double x = Math.random();
 	if (x < 1.0f/3.0f)
 	    hp = hp; // returns the "hp" after the "damage" has been applied
 	else
-	    hp -= dmg
+	    hp -= dmg;
     }
 
     public int attack(Monster mon){
