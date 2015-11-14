@@ -13,6 +13,10 @@ public class Rogue extends Character{
     public Rogue(String newName){
 	// Sets attributes
 	super(newName);
+	hp = 75;
+	strength = 150;
+	defense = 25;
+	attack = 0.5;
     }
 	
     // public  boolean isAlive(){
@@ -27,17 +31,32 @@ public class Rogue extends Character{
     // 	return name; // returns the name
     // }
 
-    // public void lowerHP(int dmg){
-    // 	hp -= dmg; // returns the "hp" after the "damage" has been applied
-    // }
+    public void lowerHP(int dmg){
+	doulbe x = Math.random();
+	if (x < 1.0f/3.0f)
+	    hp = hp; // returns the "hp" after the "damage" has been applied
+	else
+	    hp -= dmg
+    }
 
-    // public int attack(Monster mon){
-    // 	int damage;
-    // 	damage = (int)(strength * attack) - mon.getDefense(); // sets damage
-    // 	mon.lowerHP(damage);
-    // 	return damage;
-    // }
+    public int attack(Monster mon){
+	int damage;
+	damage = (int)(strength * attack) - mon.getDefense(); // sets damage
+    	mon.lowerHP(damage);
+	return damage;
+    }
 	
+    public void normalize() {
+		
+	defense = 30;
+	attack = 1;
+		
+    }
+	
+    public void specialize() {
+	defense-=10;
+	attack+=1;
+    }
 
 
 }
