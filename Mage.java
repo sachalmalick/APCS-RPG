@@ -13,6 +13,7 @@ public class Mage extends Character{
     public Mage(String newName){
 	// Sets attributes
 	super(newName);
+	hp = 100;
     }
 	
     // public  boolean isAlive(){
@@ -27,16 +28,30 @@ public class Mage extends Character{
     // 	return name; // returns the name
     // }
 
-    // public void lowerHP(int dmg){
-    // 	hp -= dmg; // returns the "hp" after the "damage" has been applied
-    // }
+    public void lowerHP(int dmg){
+	if (Math.random() < (1.00f/3.00f)) {
+	    hp += dmg;
+	    System.out.println("Monster Damage Healed!");
+	}
+	else {
+	    hp -= dmg; // returns the "hp" after the "damage" has been applied
+	}
+    }
 
-    // public int attack(Monster mon){
-    // 	int damage;
-    // 	damage = (int)(strength * attack) - mon.getDefense(); // sets damage
-    // 	mon.lowerHP(damage);
-    // 	return damage;
+    // public void lifeDrain (int damage) {
+    // 	hp += damage;
     // }
+		
+    public int attack(Monster mon){
+     	int damage;
+     	damage = (int)(strength * attack) - mon.getDefense(); // sets damage
+     	mon.lowerHP(damage);
+	// if (Math.random() < (1.00f/3.00f)) {
+	//     lifeDrain(damage);
+	//     System.out.println("Drain");
+	// }
+     	return damage;
+    }
 	
 
 

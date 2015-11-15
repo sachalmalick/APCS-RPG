@@ -82,7 +82,7 @@ public class YoRPG {
 	catch ( IOException e ) { }
 	
 
-	s = "What are ya? An Assy Archer? a Moggling Mage? A Redneck Rouge? A Stupid Sachal?: Choose \n (1) Archer \n (2) Mage \n (3) Rouge \n (4) Sachal ";
+	s = "What are ya? An Assy Archer? a Moggling Mage? A Redneck Rogue? A Stupid Sachal? A Wise Warrior?: Choose \n (1) Archer \n (2) Mage \n (3) Rogue \n (4) Sachal \n (5) Warrior \n";
 	System.out.print( s );
 	
 	try {
@@ -92,17 +92,20 @@ public class YoRPG {
 	
 	//instantiate the player's character
 	if (character == 1) {
-	pat = new Archer( name );
+	    pat = new Archer( name );
 	}
 	if (character == 2) {
-		pat = new Mage( name );
-		}
+	    pat = new Mage( name );
+	}
 	if (character == 3) {
-		pat = new Rogue( name );
-		}
+	    pat = new Rogue( name );
+	}
 	if (character == 4) {
-		pat = new Sachal( name );
-		}
+	    pat = new Sachal( name );
+	}
+	if (character == 5) {
+	    pat = new Warrior( name );
+	}
     }//end newGame()
 
 

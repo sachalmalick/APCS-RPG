@@ -45,17 +45,18 @@ public class Monster extends Character{
     // }
 
 
-    public int attack(Sachal foe){
-	int damage;
-	damage = (int)(strength * attack) - foe.getDefense(); // sets damage
-	double x = Math.random();
-	if (x < 1.0f/2.0f){
-	    lowerHP(damage);
-	    System.out.print("Confused");
-	}
-	else
-	    foe.lowerHP(damage);
-	return damage;
-    }
+    // public int attack(Sachal foe){
+    // 	int damage;
+    // 	damage = (int)(strength * attack) - foe.getDefense(); // sets damage
+    // 	double x = Math.random();
+    // 	if (x < 1.0f/2.0f){
+    // 	    damage = damage * -1;
+    // 	    foe.lowerHP(damage);
+    // 	    System.out.print("Confused");
+    // 	}
+    // 	else
+    // 	    foe.lowerHP(damage);
+    // 	return damage;
+    // }
 
 }

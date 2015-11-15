@@ -35,12 +35,18 @@ public class Archer extends Character{
     // 	hp -= dmg; // returns the "hp" after the "damage" has been applied
     // }
 
-    // public int attack(Monster mon){
-    // 	int damage;
-    // 	damage = (int)(strength * attack) - mon.getDefense(); // sets damage
-    // 	mon.lowerHP(damage);
-    // 	return damage;
-    // }
+
+    public void specialize(){
+	defense -= 10;
+	attack = Math.random() + 0.2; //Randomized accuracy
+    }
+
+    public int attack(Monster mon){
+     	int damage;
+    	damage = (int)(strength * attack) - mon.getDefense(); // sets damage
+     	mon.lowerHP(damage);
+     	return damage;
+     }
 	
 
 

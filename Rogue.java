@@ -14,7 +14,7 @@ public class Rogue extends Character{
 	// Sets attributes
 	super(newName);
 	hp = 75;
-	strength = 125;
+	strength = 75;
 	defense = 25;
 	attack = 0.5;
     }

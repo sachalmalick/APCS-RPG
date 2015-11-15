@@ -14,7 +14,7 @@ public class Sachal extends Character{
 	// Sets attributes
 	super(newName);
 	hp = 75;
-	strength = 75;
+	strength = 60;
 	defense = 30;
 	attack = 0.3;
 	
@@ -23,42 +23,61 @@ public class Sachal extends Character{
     public void lowerHP(int dmg){
 	double x = Math.random();
 	if (x < 1.0f/4.0f)
-	    System.out.println("Evaded"); // returns the "hp" after the "damage" has been applied
+	    System.out.println("Sachal Evaded!"); // Chance of evasion
 	else
 	    hp -= dmg;
     }
 
-    public int attack(Monster mon){
-    	int damage;
-    	damage = (int)(strength * attack) - mon.getDefense(); // sets damag
-    	mon.lowerHP(damage);
-	// confuse(mon);
-    	return damage;
-    }
+    // public int attack(Monster mon){
+    	
+    // 	return tryToBeMean(mon);
 
-    // public void confuse(Monster mon){
-    // 	double x = Math.random();
-    // 	if (x < 1.0f/2.0f){ //Confuse monster
-    // 	    mon.confuse();
-    // 	    System.out.println("Monster Confused!");
-    // 	}
-    // 	else
-    // 	    mon.setStrength(100);
     // }
     
-
+    public void specialize(){
+     	defense -= 10;
+     	attack = (int)(Math.random() * 3); // 1/3 chace of sachal confused
+    }
+    
+    // public int tryToBeMean(Monster mon) {
+    // 	int s = (int) (Math.random() * 2);
+    // 	if (s == 1) {
+    // 	    return confuse(mon);
+    // 	}
+    // 	else {
+			
+    // 	    return accidentallRaiseMonstersSelfAstee(mon);
+    // 	}
+    // }
+    
+    // public int accidentallRaiseMonstersSelfAstee(Monster mon) {
+    // 	return 0;
+    // }
+    
+    // public int confuse (Monster mon) {
+    // 	int damage;
+    // 	damage = (int)(strength * attack) - mon.getDefense(); // sets damage
+    //     mon.lowerHP(damage);
+    // 	return damage;
+    // }
+	
     public void normalize() {
 		
     	defense = 25;
     	attack = .3;
     		
-        }
+    }
     	
-        public void specialize() {
-    	defense-=10;
-    	attack+=1;
-        }
+    // public void specialize() {
+    // 	defense-=10;
+    // 	attack+=1;
+    // }
 
-
+    public int attack(Monster mon){
+     	int damage;
+     	damage = (int)(strength * attack) - mon.getDefense(); // sets damage
+	mon.lowerHP(damage);
+	return damage;
+    }
 
 }
