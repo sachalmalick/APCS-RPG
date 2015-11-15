@@ -1,8 +1,8 @@
 /*
   Team GitRekt - Sachal Malick, Vincent Alykin, Christopher Sherling
   APCS1 pd5
-  HW28 -- Ye Olde Role Playing Game
-  2015-11-11
+  HW30 -- Ye Olde Role Playing Game Expanded
+  2015-11-15
 */
 
 /*=============================================
